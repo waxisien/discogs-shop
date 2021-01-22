@@ -26,7 +26,7 @@ const RecordCard = (props: IRecordProps) => {
         pad="medium"
         background="light-2"
       >
-        {headerTitle}
+        {headerTitle} {record.format}
       </CardHeader>
       <CardBody height="small" pad="small">
         {record.picture &&
@@ -41,6 +41,7 @@ const RecordCard = (props: IRecordProps) => {
         <Button
           icon={<Shop />}
           hoverIndicator
+          tip="Add to cart"
         />
       </CardFooter>
     </Card>

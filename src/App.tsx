@@ -11,14 +11,14 @@ const theme = {
         value: 600,
       },
       medium: {
-        value: 900,
+        value: 1000,
       },
       large: {
-        value: 3000,
+        value: 1600,
       },
-    },
-    colors: {
-      brand: '#228BE6',
+      xlarge: {
+        value: 2000,
+      },
     },
     font: {
       family: 'Roboto',

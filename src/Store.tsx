@@ -15,7 +15,7 @@ const columns: ResponsiveSizes = {
   small: ['auto'],
   medium: ['auto', 'auto'],
   large: ['auto', 'auto', 'auto', 'auto'],
-  xlarge: ['auto', 'auto', 'auto', 'auto'],
+  xlarge: ['auto', 'auto', 'auto', 'auto', 'auto'],
 };
 
 interface ResponsiveProps {
