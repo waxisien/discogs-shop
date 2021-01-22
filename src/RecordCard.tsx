@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardFooter, CardHeader, Image } from 'grommet';
+import { Box, Button, Card, CardBody, CardFooter, CardHeader, Image } from 'grommet';
 import { Shop } from 'grommet-icons';
 
 import { IRecord } from './records';
@@ -32,6 +32,7 @@ const RecordCard = (props: IRecordProps) => {
         }
       </CardBody>
       <CardFooter pad={{ horizontal: "small" }} background="light-2">
+        <Box direction="row">{record.priceCurrency}<b>{record.priceAmount.toFixed(2)}</b></Box>
         <Button
           icon={<Shop />}
           hoverIndicator

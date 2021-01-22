@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, ResponsiveContext } from 'grommet';
 
-import { IRecord, records } from './records';
+import { IRecord, sortedRecords } from './records';
 import RecordCard from './RecordCard';
 
 interface ResponsiveSizes {
@@ -44,7 +44,7 @@ const Responsive = ({
 const Store = () => (
   <Box fill>
     <Responsive gap="medium" margin="medium">
-      {records.map(
+      {sortedRecords.map(
         (record: IRecord) => <RecordCard record={record} />
       )}
     </Responsive>
