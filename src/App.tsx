@@ -2,8 +2,21 @@ import { useState } from "react";
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet';
 import { FormClose, Notification } from 'grommet-icons';
 
+import Store from './Store';
+
 const theme = {
   global: {
+    breakpoints: {
+      small: {
+        value: 600,
+      },
+      medium: {
+        value: 900,
+      },
+      large: {
+        value: 3000,
+      },
+    },
     colors: {
       brand: '#228BE6',
     },
@@ -37,7 +50,7 @@ const App = () => {
         {size => (
           <Box fill>
             <AppBar>
-              <Heading level='3' margin='none'>Grommet Starter</Heading>
+              <Heading level='3' margin='none'>My store</Heading>
               <Button
                 icon={<Notification />}
                 onClick={() => setShowSidebar(!showSidebar)}
@@ -45,7 +58,7 @@ const App = () => {
             </AppBar>
             <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
               <Box flex align='center' justify='center'>
-                app body
+                <Store />
               </Box>
               {(!showSidebar || size !== 'small') ? (
                 <Collapsible direction="horizontal" open={showSidebar}>
