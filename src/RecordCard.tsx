@@ -11,11 +11,16 @@ interface IRecordProps {
 const RecordCard = (props: IRecordProps) => {
   const { record } = props;
   const headerTitle = `${record.artist} - ${record.name}`;
+
+  const doSomething = () => null;
+
   return (
     <Card
       elevation="medium"
       key={record.name}
       background="light-1"
+      hoverIndicator={true}
+      onClick={doSomething}
     >
       <CardHeader
         pad="medium"

@@ -45,7 +45,7 @@ const Store = () => (
   <Box fill>
     <Responsive gap="medium" margin="medium">
       {sortedRecords.map(
-        (record: IRecord) => <RecordCard record={record} />
+        (record: IRecord) => <RecordCard record={record} key={record.artist+record.name}/>
       )}
     </Responsive>
   </Box>
