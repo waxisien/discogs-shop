@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet';
-import { FormClose, Notification } from 'grommet-icons';
+import { FormClose } from 'grommet-icons';
 
 import Store from './Store';
+import CartIcon from './CartIcon';
 
 const theme = {
   global: {
@@ -52,7 +53,7 @@ const App = () => {
             <AppBar>
               <Heading level='3' margin='none'>My store</Heading>
               <Button
-                icon={<Notification />}
+                icon={<CartIcon />}
                 onClick={() => setShowSidebar(!showSidebar)}
               />
             </AppBar>
@@ -70,7 +71,7 @@ const App = () => {
                     align='center'
                     justify='center'
                   >
-                    sidebar
+                    shopping cart
                   </Box>
                 </Collapsible>
               ): (
@@ -93,7 +94,7 @@ const App = () => {
                     align='center'
                     justify='center'
                   >
-                    sidebar
+                    shopping cart
                   </Box>
                 </Layer>
               )}

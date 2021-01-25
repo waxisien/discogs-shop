@@ -5,26 +5,25 @@ import { Shop } from 'grommet-icons';
 import { IRecord } from './records';
 
 interface IRecordProps {
+  id: number;
   record: IRecord;
 };
 
 const RecordCard = (props: IRecordProps) => {
-  const { record } = props;
+  const { id, record } = props;
   const headerTitle = `${record.artist} - ${record.name}`;
 
-  const doSomething = () => null;
+  const addToCart = () => console.log(`Add ${id} to cart.`);
 
   return (
     <Card
       elevation="medium"
       key={record.name}
       background="light-1"
-      hoverIndicator={true}
-      onClick={doSomething}
     >
       <CardHeader
         pad="medium"
-        background="light-2"
+        background="light-3"
       >
         {headerTitle} {record.format}
       </CardHeader>
@@ -42,6 +41,7 @@ const RecordCard = (props: IRecordProps) => {
           icon={<Shop />}
           hoverIndicator
           tip="Add to cart"
+          onClick={addToCart}
         />
       </CardFooter>
     </Card>
