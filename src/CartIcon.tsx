@@ -2,7 +2,7 @@ import { Stack, Box, Text } from 'grommet';
 import { Cart } from 'grommet-icons';
 import { useSelector } from 'react-redux';
 
-import { getCartSize } from './redux/selectors';
+import { getCartSize } from 'src/redux/selectors';
 
 const CartIcon = () => {
   const cartSize = useSelector(getCartSize);

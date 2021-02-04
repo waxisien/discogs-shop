@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Grid, ResponsiveContext } from 'grommet';
 
-import { IRecord, sortedRecords } from './records';
-import RecordCard from './RecordCard';
+import { IRecord, sortedRecords } from 'src/records';
+import RecordCard from 'src/RecordCard';
 
 interface ResponsiveSizes {
   [size: string]: string[];

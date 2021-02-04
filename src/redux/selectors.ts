@@ -1,4 +1,4 @@
-import { RootState } from "./reducers";
+import { RootState } from "src/redux/reducers";
 
 const getCartState = (store: RootState) => store.cart;
 

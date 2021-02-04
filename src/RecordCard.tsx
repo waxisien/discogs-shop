@@ -3,8 +3,8 @@ import { Box, Button, Card, CardBody, CardFooter, CardHeader, Image } from 'grom
 import { Shop } from 'grommet-icons';
 import { useDispatch } from 'react-redux';
 
-import { IRecord } from './records';
-import { addToCart } from './redux/actions';
+import { IRecord } from 'src/records';
+import { addToCart } from 'src/redux/actions';
 
 interface IRecordProps {
   id: number;
@@ -16,10 +16,7 @@ const RecordCard = (props: IRecordProps) => {
   const dispatch = useDispatch();
   const headerTitle = `${record.artist} - ${record.name}`;
 
-  const addItemToCart = () => {
-    console.log('bjr');
-    dispatch(addToCart(id));
-  };
+  const addItemToCart = () => dispatch(addToCart(id));
 
   return (
     <Card

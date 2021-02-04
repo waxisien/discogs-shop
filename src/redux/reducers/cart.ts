@@ -1,5 +1,5 @@
-import { CartActionTypes } from "../actions";
-import { ADD_TO_CART, CLEAR_CART } from "../actionTypes";
+import { CartActionTypes } from "src/redux/actions";
+import { ADD_TO_CART, CLEAR_CART } from "src/redux/actionTypes";
 
 interface CartState {
   cartIds: number[];

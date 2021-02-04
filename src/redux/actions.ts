@@ -1,4 +1,4 @@
-import { ADD_TO_CART, CLEAR_CART } from "./actionTypes";
+import { ADD_TO_CART, CLEAR_CART } from "src/redux/actionTypes";
 
 interface AddToCartAction {
   type: typeof ADD_TO_CART
