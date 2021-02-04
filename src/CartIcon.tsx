@@ -1,7 +1,12 @@
 import { Stack, Box, Text } from 'grommet';
 import { Cart } from 'grommet-icons';
+import { useSelector } from 'react-redux';
+
+import { getCartSize } from './redux/selectors';
 
 const CartIcon = () => {
+  const cartSize = useSelector(getCartSize);
+
   // TODO: fix icon size
   return (
     <Stack anchor="top-right">
@@ -11,7 +16,7 @@ const CartIcon = () => {
           pad={{ horizontal: 'xsmall' }}
           round
         >
-          <Text size="xsmall">0</Text>
+          <Text size="xsmall">{cartSize}</Text>
       </Box>
     </Stack>
   );
