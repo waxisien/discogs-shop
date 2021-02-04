@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet';
 import { FormClose } from 'grommet-icons';
 
-import Store from './Store';
-import CartIcon from './CartIcon';
+import Store from 'src/Store';
+import CartIcon from 'src/CartIcon';
 
 const theme = {
   global: {

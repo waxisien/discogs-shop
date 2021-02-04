@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Button, Card, CardBody, CardFooter, CardHeader, Image } from 'grommet';
 import { Shop } from 'grommet-icons';
+import { useDispatch } from 'react-redux';
 
-import { IRecord } from './records';
+import { IRecord } from 'src/records';
+import { addToCart } from 'src/redux/actions';
 
 interface IRecordProps {
   id: number;
@@ -11,9 +13,10 @@ interface IRecordProps {
 
 const RecordCard = (props: IRecordProps) => {
   const { id, record } = props;
+  const dispatch = useDispatch();
   const headerTitle = `${record.artist} - ${record.name}`;
 
-  const addToCart = () => console.log(`Add ${id} to cart.`);
+  const addItemToCart = () => dispatch(addToCart(id));
 
   return (
     <Card
@@ -41,7 +44,7 @@ const RecordCard = (props: IRecordProps) => {
           icon={<Shop />}
           hoverIndicator
           tip="Add to cart"
-          onClick={addToCart}
+          onClick={addItemToCart}
         />
       </CardFooter>
     </Card>
