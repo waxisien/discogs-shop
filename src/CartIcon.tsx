@@ -11,13 +11,15 @@ const CartIcon = () => {
   return (
     <Stack anchor="top-right">
       <Cart size="large"/>  
+      {cartSize &&
         <Box
-          background="light-1"
+          background="accent-4"
           pad={{ horizontal: 'xsmall' }}
           round
         >
           <Text size="xsmall">{cartSize}</Text>
-      </Box>
+        </Box>
+      }
     </Stack>
   );
 };
