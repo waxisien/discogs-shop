@@ -2,7 +2,7 @@ import { CartActionTypes } from "src/redux/actions";
 import { ADD_TO_CART, CLEAR_CART } from "src/redux/actionTypes";
 
 interface CartState {
-  cartIds: number[];
+  cartIds: string[];
 }
 
 const initialState: CartState = {
@@ -11,13 +11,13 @@ const initialState: CartState = {
 
 export default function cartReducer(
   state = initialState,
-  action: CartActionTypes,
+  action: CartActionTypes
 ): CartState {
   switch (action.type) {
     case ADD_TO_CART: {
       return {
         ...state,
-        cartIds: [...state.cartIds, action.payload],
+        cartIds: [...state.cartIds, action.recordId],
       };
     }
 
